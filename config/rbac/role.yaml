@@ -1,0 +1,84 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: manager-role
+rules:
+- apiGroups:
+  - zoli.com.zoli.com
+  resources:
+  - bikesales
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - zoli.com.zoli.com
+  resources:
+  - bikesales/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - zoli.com.zoli.com
+  resources:
+  - bikesales/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - zoli.com.zoli.com
+  resources:
+  - carsales
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - zoli.com.zoli.com
+  resources:
+  - carsales/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - zoli.com.zoli.com
+  resources:
+  - carsales/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - zoli.com.zoli.com
+  resources:
+  - myowners
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - zoli.com.zoli.com
+  resources:
+  - myowners/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - zoli.com.zoli.com
+  resources:
+  - myowners/status
+  verbs:
+  - get
+  - patch
+  - update

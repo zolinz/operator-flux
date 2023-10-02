@@ -1,0 +1,31 @@
+# permissions for end users to edit carsales.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: carsales-editor-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: kube-operator-02
+    app.kubernetes.io/part-of: kube-operator-02
+    app.kubernetes.io/managed-by: kustomize
+  name: carsales-editor-role
+rules:
+- apiGroups:
+  - zoli.com
+  resources:
+  - carsales
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - zoli.com.zoli.com
+  resources:
+  - carsales/status
+  verbs:
+  - get
