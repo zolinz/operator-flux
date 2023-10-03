@@ -25,6 +25,7 @@ metadata:
     app.kubernetes.io/created-by: kube-operator-02
     app.kubernetes.io/part-of: kube-operator-02
     app.kubernetes.io/managed-by: kustomize
+    test: zoli
 spec:
   selector:
     matchLabels:
