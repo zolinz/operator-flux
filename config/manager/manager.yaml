@@ -9,6 +9,7 @@ metadata:
     app.kubernetes.io/created-by: kube-operator-02
     app.kubernetes.io/part-of: kube-operator-02
     app.kubernetes.io/managed-by: kustomize
+    test: zoli
   name: kube-operator-02-system
 ---
 apiVersion: apps/v1
