@@ -11,4 +11,4 @@ metadata:
   namespace: bikes
 spec:
   make: bmw
-  model: R1300GS
+  model: R1500GS
