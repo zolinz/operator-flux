@@ -1,0 +1,27 @@
+# permissions for end users to view carsales.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: carsales-viewer-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: kube-operator-02
+    app.kubernetes.io/part-of: kube-operator-02
+    app.kubernetes.io/managed-by: kustomize
+  name: carsales-viewer-role
+rules:
+- apiGroups:
+  - zoli.com
+  resources:
+  - carsales
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - zoli.com.zoli.com
+  resources:
+  - carsales/status
+  verbs:
+  - get
