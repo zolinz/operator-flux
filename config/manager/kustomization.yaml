@@ -5,4 +5,4 @@ kind: Kustomization
 images:
 - name: controller
   newName: zolinz/controller
-  newTag: "1.1"
+  newTag: "1.3"
